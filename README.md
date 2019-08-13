@@ -1,4 +1,6 @@
-# Instrucciones para uso del backend
+![alt text](http://planb.com.mx/wp-content/uploads/2019/01/cropped-mxplanb.png)
+
+# Instrucciones para uso del backend 🚀
 ### `Registrar un BAR`
 Debes entrar al siguiente endpoint:
 ```
