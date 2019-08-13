@@ -1,3 +1,4 @@
+# Instrucciones para uso del backend
 ### `Registrar un BAR`
 Debes entrar al siguiente endpoint:
 ```
