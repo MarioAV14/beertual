@@ -5,6 +5,8 @@ from django.views.static import serve
 from django.conf import settings
 from django.conf.urls import url
 from directorio.views import *
+from rest_framework.authtoken import views
+from accounts.views import UserViewSet
 
 directorio=routers.DefaultRouter()
 
@@ -21,5 +23,7 @@ urlpatterns = [
         regex=r'^media/(?P<path>.*)$',
         view=serve,
         kwargs={'document_root': settings.MEDIA_ROOT}
-    )
+    ),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api-token-auth/', views.obtain_auth_token),
 ]
