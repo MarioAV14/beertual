@@ -15,7 +15,6 @@ class OfertasViewSet(viewsets.ModelViewSet):
         if oferta:
             queryset_list=queryset_list.filter(nombre_bar__id=oferta)
         return queryset_list
-#ofertas del bar
 
 class ImagenesViewSet(viewsets.ModelViewSet):
     queryset=Imagenes.objects.all()
@@ -34,11 +33,11 @@ class BaresViewSet(viewsets.ModelViewSet):
         if user:
             queryset_list=queryset_list.filter(usuario__id=user)
         return queryset_list
-#usuario filtro
 
 class BebidasViewSet(viewsets.ModelViewSet):
     queryset=Bebidas.objects.all()
     serializer_class=BebidasSerializer
+#filtro
 
 class GETOfertasViewSet(viewsets.ModelViewSet):
     queryset=Ofertas.objects.all()
