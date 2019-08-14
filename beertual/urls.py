@@ -6,8 +6,7 @@ from django.conf import settings
 from django.conf.urls import url
 from directorio.views import *
 from rest_framework.authtoken import views
-from accounts.views import UserViewSet
-from accounts.views import ProfileViewSet
+from accounts.views import *
 from contacto.views import EmpresaViewSet
 
 directorio=routers.DefaultRouter()
@@ -27,6 +26,7 @@ urlpatterns = [
     path('directorio/', include(directorio.urls)),
     path('accounts/', include(accounts.urls)),
     path('contacto/', include (contacto.urls)),
+    path('my_user/', MyUser.as_view()),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,

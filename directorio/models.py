@@ -32,14 +32,18 @@ class Imagenes(models.Model):
     nombre_bares= models.ForeignKey("Bar", on_delete=models.CASCADE)
     url_imagen= models.ImageField(upload_to='imagenesbares')
     def __str__(self):
+<<<<<<< HEAD
         return self.nombre_bares
+=======
+        return self.nombre_bares.titulo_bar
+>>>>>>> bd39ab151992dec49453f5b8d9c5561d0ab13a6b
 
 class Bebidas(models.Model):
     nombre= models.CharField(max_length=50)
     descripcion= models.TextField(blank=True, null=True)
     precio= models.DecimalField(max_digits=10, decimal_places=2,blank=True, null=True)
     imagen= models.ImageField(upload_to='imagenbebidas',blank=True, null=True)
-    nombre_bar= models.ForeignKey("Bar", on_delete=models.CASCADE)
+    nombre_bar=models.ForeignKey("Bar", on_delete=models.CASCADE)
     def __str__(self):
         return self.nombre
 
