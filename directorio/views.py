@@ -13,9 +13,9 @@ class OfertasViewSet(viewsets.ModelViewSet):
         oferta=self.request.GET.get('idbar')
         queryset_list=super(OfertasViewSet, self).get_queryset()
         if oferta:
-            queryset_list=queryset_list.filter(nombre_bares__id=oferta)
+            queryset_list=queryset_list.filter(nombre_bar__id=oferta)
         return queryset_list
-    
+
 class ImagenesViewSet(viewsets.ModelViewSet):
     queryset=Imagenes.objects.all()
     serializer_class=ImagenesSerializer
@@ -23,7 +23,7 @@ class ImagenesViewSet(viewsets.ModelViewSet):
         imagen=self.request.GET.get('idbar')
         queryset_list=super(ImagenesViewSet, self).get_queryset()
         if imagen:
-            queryset_list=queryset_list.filter(nombre_bares__id=imagen)
+            queryset_list=queryset_list.filter(nombre_bar__id=imagen)
         return queryset_list
 
 class BaresViewSet(viewsets.ModelViewSet):

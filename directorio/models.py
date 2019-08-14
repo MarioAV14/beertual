@@ -29,7 +29,7 @@ def ensure_bares_exists(sender, **kwargs):
         Bar.objects.get_or_create(titulo_bar=kwargs.get('instance'))
 
 class Imagenes(models.Model):
-    nombre_bares= models.ForeignKey("Bar", on_delete=models.CASCADE)
+    nombre_bar= models.ForeignKey("Bar", on_delete=models.CASCADE)
     url_imagen= models.ImageField(upload_to='imagenesbares')
     def __str__(self):
         return self.nombre_bares.titulo_bar
