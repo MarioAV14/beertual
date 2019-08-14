@@ -19,7 +19,12 @@ class OfertasViewSet(viewsets.ModelViewSet):
 class ImagenesViewSet(viewsets.ModelViewSet):
     queryset=Imagenes.objects.all()
     serializer_class=ImagenesSerializer
-#filtro
+    def get_queryset(self, *args, **kwargs):
+        imagen=self.request.GET.get('idbar')
+        queryset_list=super(OfertasViewSet, self).get_queryset()
+        if imagen:
+            queryset_list=queryset_list.filter(nombre_bar__id=imagen)
+        return queryset_list
 
 class BaresViewSet(viewsets.ModelViewSet):
     queryset=Bar.objects.all()
@@ -37,7 +42,12 @@ class BaresViewSet(viewsets.ModelViewSet):
 class BebidasViewSet(viewsets.ModelViewSet):
     queryset=Bebidas.objects.all()
     serializer_class=BebidasSerializer
-#filtro
+    def get_queryset(self, *args, **kwargs):
+        bebida=self.request.GET.get('idbar')
+        queryset_list=super(OfertasViewSet, self).get_queryset()
+        if bebida:
+            queryset_list=queryset_list.filter(nombre_bar__id=bebida)
+        return queryset_list
 
 class GETOfertasViewSet(viewsets.ModelViewSet):
     queryset=Ofertas.objects.all()
