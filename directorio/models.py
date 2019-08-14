@@ -32,7 +32,7 @@ class Imagenes(models.Model):
     nombre_bares= models.ForeignKey("Bar", on_delete=models.CASCADE)
     url_imagen= models.ImageField(upload_to='imagenesbares')
     def __str__(self):
-        return self.nombre_bar
+        return self.nombre_bares
 
 class Bebidas(models.Model):
     nombre= models.CharField(max_length=50)
