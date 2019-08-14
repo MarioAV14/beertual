@@ -1,12 +1,9 @@
 from rest_framework import serializers
-from .models import Bares
-from .models import Bebidas
-from .models import Imagenes
-from .models import Ofertas
+from .models import *
 
 class BaresSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Bares
+        model=Bar
         fields='__all__'
 
 class ImagenesSerializer(serializers.ModelSerializer):
@@ -26,7 +23,7 @@ class OfertasSerializer(serializers.ModelSerializer):
 
 class OnlyNameBaresSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Bares
+        model=Bar
         fields=['titulo_bar','slug']
         
 class GETOfertasSerializer(serializers.ModelSerializer):
