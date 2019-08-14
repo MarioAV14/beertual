@@ -15,7 +15,7 @@ class ImagenesViewSet(viewsets.ModelViewSet):
     serializer_class=ImagenesSerializer
 
 class BaresViewSet(viewsets.ModelViewSet):
-    queryset=Bares.objects.all()
+    queryset=Bar.objects.all()
     serializer_class=BaresSerializer
     def get_queryset(self, *args, **kwargs):
         slug=self.request.GET.get('slug')
