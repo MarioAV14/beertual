@@ -19,7 +19,7 @@ class BebidasSerializer(serializers.ModelSerializer):
 class OfertasSerializer(serializers.ModelSerializer):
     class Meta:
         model=Ofertas
-        fields=['nombre','descripcion','precio','imagen','nombre_bar']
+        fields='__all__'
 
 class OnlyNameBaresSerializer(serializers.ModelSerializer):
     class Meta:
