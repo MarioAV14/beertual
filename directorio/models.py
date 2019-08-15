@@ -48,6 +48,6 @@ class Ofertas(models.Model):
     descripcion= models.TextField(blank=True, null=True)
     precio= models.DecimalField(max_digits=10, decimal_places=2,blank=True, null=True)
     imagen= models.ImageField(upload_to='imagenofertas',blank=True, null=True)
-    nombre_bar= models.ForeignKey("Bar", on_delete=models.CASCADE)
+    nombre_bar=models.ForeignKey("Bar", on_delete=models.CASCADE)
     def __str__(self):
         return self.nombre
