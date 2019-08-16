@@ -1,5 +1,5 @@
 ![alt text](http://planb.com.mx/wp-content/uploads/2019/01/cropped-mxplanb.png)
-![alt text](http://planb.com.mx/images/image/pQR)
+![alt text](https://drive.google.com/open?id=1kMrWcy4W3TQh579bPQVrIA0e83SgSpOj)
 
 # Instrucciones para uso del backend 🚀
 ### `Registro de Bares`
