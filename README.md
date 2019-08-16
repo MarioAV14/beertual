@@ -1,5 +1,4 @@
 ![alt text](http://planb.com.mx/wp-content/uploads/2019/01/cropped-mxplanb.png)
-![alt text](http://images.planb.com.mx/image/U1h)
 # Instrucciones para uso del backend 🚀
 ### `Registro de Bares`
 Debes entrar al siguiente endpoint:
