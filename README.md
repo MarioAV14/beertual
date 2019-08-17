@@ -19,7 +19,7 @@ https://host/directorio/registros-de-bares/?iduser=idusuario`
 ### `Registro de bebidas`
 Debes entrar al siguiente endpoint:
 ```
-https://host:8000/directorio/registros-de-bebidas/`
+https://host/directorio/registros-de-bebidas/`
 ```
 
 ### `Consulta de bebidas`
@@ -27,7 +27,7 @@ Debes entrar al siguiente endpoint:
 Dentro de este endpoint se pueden filtrar las bebidas según el id del bar para visualizar a cual bar pertenece cada una
 (recuerda que iddelbar es el numero que distingue a cada bar)
 ```
-https://host:8000/directorio/registros-de-bebidas/?idbar=iddelbar`
+https://host/directorio/registros-de-bebidas/?idbar=iddelbar`
 ```
 
 ### `Registro de ofertas`
@@ -64,4 +64,29 @@ Dentro de este endpoint se pueden filtrar las imagenes según el id del bar para
 (recuerda que iddelbar es el numero que distingue a cada bar)
 ```
 https://host/directorio/registros-de-imagenes/?idbar=iddelbar`
+```
+### `Registro de usuarios`
+Debes entrar al siguiente endpoint:
+```
+https://host/accounts/registro-perfiles/`
+```
+
+### `Consulta de usuarios`
+Debes entrar al siguiente endpoint:
+Dentro de este endpoint se pueden filtrar los usuarios según el id del mismo 
+(recuerda que iduser es el numero que distingue a cada usuario)
+```
+https://host/accounts/registro-perfiles/?iduser=6`
+```
+
+### `Registro y consulta de empresas`
+Debes entrar al siguiente endpoint:
+```
+https://host/contacto/resgistro-de-empresas/`
+```
+
+### `Consultar datos del usuario con el cual se ingreso`
+Debes entrar al siguiente endpoint:
+```
+https://host/my_user/`
 ```

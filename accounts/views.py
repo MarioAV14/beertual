@@ -12,6 +12,12 @@ from rest_framework.response import Response
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset=Profile.objects.all()
     serializer_class=ProfileSerializer
+    def get_queryset(self, *args, **kwargs):
+        perfil=self.request.GET.get('iduser')
+        queryset_list=super(ProfileViewSet, self).get_queryset()
+        if perfil:
+            queryset_list=queryset_list.filter(id=perfil)
+        return queryset_list
 
 
 def error_404_view(request, exception):
