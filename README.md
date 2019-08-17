@@ -65,13 +65,13 @@ Dentro de este endpoint se pueden filtrar las imagenes según el id del bar para
 ```
 https://host/directorio/registros-de-imagenes/?idbar=iddelbar`
 ```
-### `Registro de usuarios`
+### `Registro de perfiles de usuarios`
 Debes entrar al siguiente endpoint:
 ```
 https://host/accounts/registro-perfiles/`
 ```
 
-### `Consulta de usuarios`
+### `Consulta de perfiles de usuarios`
 Debes entrar al siguiente endpoint:
 Dentro de este endpoint se pueden filtrar los usuarios según el id del mismo 
 (recuerda que iduser es el numero que distingue a cada usuario)
