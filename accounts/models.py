@@ -11,10 +11,6 @@ from rest_framework.authtoken.models import Token
 
 class Profile(models.Model):
     usuario= models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile_usuario')
-    nombre= models.CharField(max_length=50)
-    ap_paterno= models.CharField(max_length=50)
-    ap_materno= models.CharField(max_length=50,blank=True, null=True)
-    correo= models.EmailField(max_length=254)
     num_telefono= models.CharField(max_length=10)
     foto= models.ImageField(upload_to='imagenusuario', blank=True, null=True)
     slug= models.SlugField(unique=True, blank=True)

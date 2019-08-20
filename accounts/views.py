@@ -31,6 +31,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class MyUser(APIView):
     def get(self, request, format=None):
-        my_user = Profile.objects.all().get(usuario=request.user.id)
-        serializer = ProfileSerializer(my_user)
+        my_user = User.objects.all().get(id=request.user.id)
+        serializer = UserSerializer(my_user)
         return Response(serializer.data)
